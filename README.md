@@ -15,7 +15,7 @@ Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
    * Raspberry Pi Imager:https://www.raspberrypi.org/software/
    * Win32Diskimager: https://sourceforge.net/projects/win32diskimager/
    * Etcher: https://www.balena.io/etcher/
-1. Insert the microSD card and boot the Raspberry Pi.
+1. Insert the micro SD card and boot Raspberry Pi.
 
 
 
