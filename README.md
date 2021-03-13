@@ -11,10 +11,10 @@
 ### Setting up Raspberry Pi
 Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
 1. Download latest Raspberry Pi OS lite: https://www.raspberrypi.org/software/operating-systems/
-2. Write to a micro SD card with one of the following tools:
-   * Raspberry Pi Imager:https://www.raspberrypi.org/software/
-   * Win32Diskimager: https://sourceforge.net/projects/win32diskimager/
-   * Etcher: https://www.balena.io/etcher/
+1. Write to a micro SD card with one of the following tools:
+   1. Raspberry Pi Imager:https://www.raspberrypi.org/software/
+   1. Win32Diskimager: https://sourceforge.net/projects/win32diskimager/
+   1. Etcher: https://www.balena.io/etcher/
 1. Insert the micro SD card and boot Raspberry Pi.
 
 ### WiFi Hotspot and DNS
