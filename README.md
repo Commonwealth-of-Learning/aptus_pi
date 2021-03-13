@@ -17,6 +17,16 @@ Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
    * Etcher: https://www.balena.io/etcher/
 1. Insert the micro SD card and boot Raspberry Pi.
 
+### WiFi Hotspot and DNS
+Source: https://github.com/RaspAP/raspap-webgui
+
+### Captive Portal (optional)
+Source:https://www.maketecheasier.com/turn-raspberry-pi-captive-portal-wi%E2%80%90fi-access-point/
+
+### Web Administration Portal(optional)
+Source: https://pimylifeup.com/raspberry-pi-webmin/
+
+
 
 
 
