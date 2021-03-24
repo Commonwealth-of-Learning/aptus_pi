@@ -17,6 +17,16 @@ Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
    1. Etcher: https://www.balena.io/etcher/
 1. Insert the micro SD card and boot Raspberry Pi.
 
+### Create a SUDO user account
+Source: https://linuxize.com/post/how-to-create-a-sudo-user-on-debian/
+1. Login Raspberry Pi with default username and password: pi/raspberry
+1. Executing the following commands:
+```console
+sudo su
+adduser aptus
+usermod -aG sudo username
+```
+
 ### WiFi Hotspot and DNS
 Source: https://github.com/RaspAP/raspap-webgui
 
