@@ -121,23 +121,28 @@ Default configuration file location: /etc/apache2/sites-available/000-default.co
 ```
 #### or Nginx (optional)
 
-#### PHP 7.3
+#### PHP 7.3 (or PHP7.4+)
+
+Install PHP and support libraries (libraries for Moodle, WordPress, ownCloud, etc. sqlite3 for digital world map)
 ```console
-$sudo apt install ca-certificates apt-transport-https 
-$wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
-$echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
-$sudo apt update
-$sudo apt install php7.3
-$sudo apt install graphviz aspell ghostscript clamav php7.3-pspell php7.3-curl php7.3-gd php7.3-intl php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-ldap php7.3-zip php7.3-soap php7.3-mbstring
-$sudo apt install sqlite3 php7.3-sqlite3
+sudo apt update
+sudo apt install php7.3
+sudo apt install graphviz aspell ghostscript clamav php7.3-pspell php7.3-curl php7.3-gd php7.3-intl php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-ldap php7.3-zip php7.3-soap php7.3-mbstring
+sudo apt install sqlite3 php7.3-sqlite3
 ```
-/etc/apache2/mods-enabled/dir.conf
+Change the order of default index file
+```console
+nano /etc/apache2/mods-enabled/dir.conf
+```
 ```bash
 <IfModule mod_dir.c>
     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
 ```
-/etc/php/7.3/apache2/php.ini
+Update PHP settings (for ownCloud, Moodle, etc.)
+```console
+nano /etc/php/7.3/apache2/php.ini
+```
 ```bash
 post_max_size = 2000M
 upload_max_size = 2000M
@@ -146,5 +151,20 @@ max_execution_time = 3600
 memory_limit = 256M
 ```
 
+#### MySQL
 
+Install the MariaDB/MySQL server by entering the following command into a terminal:
+```console
+sudo apt-get install mariadb-server php-mysql -y
+```
+
+Create a new user
+```console
+sudo su
+mysql -u root
+MariadDB > CREATE USER 'aptus'@'localhost' IDENTIFIED BY '*********';
+MariadDB > GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+MariadDB > FLUSH PRIVILEGES;
+MariadDB > quit;
+```
 
