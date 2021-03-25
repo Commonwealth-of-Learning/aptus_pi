@@ -31,11 +31,12 @@ usermod -aG sudo aptus
 ```console
 sudo raspi-config
 ```
-1.Select Interfacing Options
-2.Navigate to and select SSH
-3.Choose Yes
-4.Select Ok
-5.Choose Finish
+1. Select Interfacing Options
+1. Navigate to and select SSH
+1. Choose Yes
+1. Select Ok
+1. Choose Finish
+
 Alternatively, use systemctl to start the service
 ```console
 sudo systemctl enable ssh
