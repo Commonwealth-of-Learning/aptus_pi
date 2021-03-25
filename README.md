@@ -168,3 +168,47 @@ MariadDB > FLUSH PRIVILEGES;
 MariadDB > quit;
 ```
 
+### Aptus applications and OER content
+
+#### WordPress, Moodle, ownCloud, Phet, Digital World map, etc.
+
+Download the following files from link provided by us:
+```
+Aptus_homepage_timestamp.tar.gz
+Aptus_moodledata_timestamp.tar.gz
+moodle.sql
+owncloud.sql
+wordpress.sql
+```
+Extract files
+```console
+tar xzvf *.tar.gz
+```
+Move files and update permissions
+```console
+sudo mv var/www/html/* /var/www/html
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 0755 /var/www/html
+sudo mv var/moodledata /var/
+sudo chown -R www-data:www-data /var/moodledata
+sudo chmod -R 777 /var/moodledata
+```
+Restore database files
+```console
+sudo su
+mysql -u root
+MariaDB > CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+MariaDB > USE moodle;
+MariaDB > source /home/aptus/moodle.sql;
+MariaDB > CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+MariaDB > USE wordpress;
+MariaDB > source /home/aptus/wordpress.sql;
+MariaDB > CREATE DATABASE owncloud DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+MariaDB > USE owncloud;
+MariaDB > source /home/aptus/owncloud.sql;
+
+
+#### Kiwix (offline Wikipedia)
+
+
+#### KA-lite (offline Khan Academy videos)
