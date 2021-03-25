@@ -72,7 +72,7 @@ SSID: raspi-webgui
 password: ChangeMe
 ```
 
-Access Raspap dashboard by entering the following URL in a browser: http://10.3.141.1 
+Access Raspap dashboard by entering the following URL in a browser: 
 
 Default credentials for Raspap dashboard:
 ```
@@ -95,6 +95,13 @@ Reboot the device and verify the changes.
 ### Captive Portal (optional)
 Source:https://www.maketecheasier.com/turn-raspberry-pi-captive-portal-wi%E2%80%90fi-access-point/
 
+### LAMP stack
+Source: https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress
+
+Install Apache2
+```console
+sudo apt-get install apache2 -y
+```
 
 
 
