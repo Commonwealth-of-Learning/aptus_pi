@@ -55,6 +55,37 @@ Set the WiFi country in raspi-config's Localisation Options
 sudo raspi-config
 ```
 
+Connect Aptus Pi to Internet via a wired or wirless connection
+
+Install RaspAP from a terminal
+```console
+curl -sL https://install.raspap.com | bash
+```
+
+Complete the installation by rebooting the device.
+
+Connect to Aptus Pi via wireless network:
+```
+SSID: raspi-webgui
+password: ChangeMe
+```
+Access Raspap dashboard by entering the following URL in a browser: http://10.3.141.1 
+
+Default credentials for Raspap dashboard:
+```
+Username: admin
+Password: secret
+
+Configure the wireless access point network as follows:
+```
+IP address: 192.168.169.2
+Username: aptus
+Password: ******
+DHCP range: 192.168.169.10 to 192.168.169.250
+SSID: Aptus-PI
+Password: ********
+http port: 81
+```
 
 
 ### Captive Portal (optional)
