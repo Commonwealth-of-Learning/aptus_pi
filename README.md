@@ -26,6 +26,21 @@ sudo su
 adduser aptus
 usermod -aG sudo aptus
 ```
+### Enable SSH
+1. Launch raspi-config by entering the following command in a terminal:
+```console
+sudo raspi-config
+```
+1.Select Interfacing Options
+2.Navigate to and select SSH
+3.Choose Yes
+4.Select Ok
+5.Choose Finish
+Alternatively, use systemctl to start the service
+```console
+sudo systemctl enable ssh
+sudo systemctl start ssh
+```
 
 ### WiFi Hotspot and DNS
 Source: https://github.com/RaspAP/raspap-webgui
