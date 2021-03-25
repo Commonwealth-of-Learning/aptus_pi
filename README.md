@@ -98,7 +98,7 @@ Source:https://www.maketecheasier.com/turn-raspberry-pi-captive-portal-wi%E2%80%
 ### LAMP stack
 Source: https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress
 
-Install Apache2
+#### Apache2
 ```console
 sudo apt-get install apache2 -y
 sudo a2enmod rewrite
@@ -106,6 +106,7 @@ sudo a2dismod reqtimeout
 sudo systemctl restart apache2
 ```
 Enable htaccess by editing Apache2 configuration
+
 Default configuration file location: /etc/apache2/sites-available/000-default.conf
 ```bash
 <VirtualHost *:80>
@@ -118,6 +119,7 @@ Default configuration file location: /etc/apache2/sites-available/000-default.co
     . . .
 </VirtualHost>
 ```
+#### or Nginx (optional)
 
 
 
