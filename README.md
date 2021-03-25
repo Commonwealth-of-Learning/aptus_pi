@@ -27,15 +27,15 @@ adduser aptus
 usermod -aG sudo aptus
 ```
 ### Enable SSH
-1. Launch raspi-config by entering the following command in a terminal:
+Launch raspi-config by entering the following command in a terminal:
 ```console
 sudo raspi-config
 ```
-1. Select Interfacing Options
-1. Navigate to and select SSH
-1. Choose Yes
-1. Select Ok
-1. Choose Finish
+* Select Interfacing Options
+* Navigate to and select SSH
+* Choose Yes
+* Select Ok
+* Choose Finish
 
 Alternatively, use systemctl to start the service
 ```console
