@@ -19,6 +19,7 @@ Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
 
 ### Create a SUDO user account
 Source: https://linuxize.com/post/how-to-create-a-sudo-user-on-debian/
+
 Login Raspberry Pi with default username and password: pi/raspberry
 Execute the following commands in a terminal:
 ```console
