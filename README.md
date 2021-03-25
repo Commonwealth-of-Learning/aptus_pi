@@ -20,15 +20,15 @@ Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
 ### Create a SUDO user account
 Source: https://linuxize.com/post/how-to-create-a-sudo-user-on-debian/
 
-Login Raspberry Pi with default username and password: pi/raspberry
-Execute the following commands in a terminal:
+* Login Raspberry Pi with default username and password: pi/raspberry
+* Execute the following commands in a terminal:
 ```console
 sudo su
 adduser aptus
 usermod -aG sudo aptus
 ```
 ### Enable SSH
-Launch raspi-config by entering the following command in a terminal:
+* Launch raspi-config by entering the following command in a terminal:
 ```console
 sudo raspi-config
 ```
