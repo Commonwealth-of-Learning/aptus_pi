@@ -29,6 +29,8 @@ adduser aptus
 usermod -aG sudo aptus
 ```
 ### Enable SSH
+Source: https://www.raspberrypi.org/documentation/remote-access/ssh/
+
 Launch raspi-config by entering the following command in a terminal:
 ```console
 sudo raspi-config
