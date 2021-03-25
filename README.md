@@ -46,6 +46,8 @@ Alternatively, use systemctl to start the service
 sudo systemctl enable ssh
 sudo systemctl start ssh
 ```
+### Web Administration Portal(optional)
+Source: https://pimylifeup.com/raspberry-pi-webmin/
 
 ### WiFi Hotspot and DNS
 Source: https://github.com/RaspAP/raspap-webgui
@@ -64,18 +66,19 @@ curl -sL https://install.raspap.com | bash
 
 Complete the installation by rebooting the device.
 
-Connect to Aptus Pi via wireless network:
+Connect to the device via wireless network:
 ```
 SSID: raspi-webgui
 password: ChangeMe
 ```
+
 Access Raspap dashboard by entering the following URL in a browser: http://10.3.141.1 
 
 Default credentials for Raspap dashboard:
 ```
 Username: admin
 Password: secret
-
+```
 Configure the wireless access point network as follows:
 ```
 IP address: 192.168.169.2
@@ -87,12 +90,12 @@ Password: ********
 http port: 81
 ```
 
+Reboot the device and verify the changes.
 
 ### Captive Portal (optional)
 Source:https://www.maketecheasier.com/turn-raspberry-pi-captive-portal-wi%E2%80%90fi-access-point/
 
-### Web Administration Portal(optional)
-Source: https://pimylifeup.com/raspberry-pi-webmin/
+
 
 
 
