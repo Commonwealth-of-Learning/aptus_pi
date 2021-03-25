@@ -24,11 +24,17 @@ Source: https://linuxize.com/post/how-to-create-a-sudo-user-on-debian/
 ```console
 sudo su
 adduser aptus
-usermod -aG sudo username
+usermod -aG sudo aptus
 ```
 
 ### WiFi Hotspot and DNS
 Source: https://github.com/RaspAP/raspap-webgui
+1. Set the WiFi country in raspi-config's Localisation Options
+```console
+sudo raspi-config
+```
+
+
 
 ### Captive Portal (optional)
 Source:https://www.maketecheasier.com/turn-raspberry-pi-captive-portal-wi%E2%80%90fi-access-point/
