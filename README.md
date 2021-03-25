@@ -19,8 +19,8 @@ Source: https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up
 
 ### Create a SUDO user account
 Source: https://linuxize.com/post/how-to-create-a-sudo-user-on-debian/
-1. Login Raspberry Pi with default username and password: pi/raspberry
-1. Executing the following commands:
+Login Raspberry Pi with default username and password: pi/raspberry
+Execute the following commands in a terminal:
 ```console
 sudo su
 adduser aptus
@@ -45,7 +45,7 @@ sudo systemctl start ssh
 
 ### WiFi Hotspot and DNS
 Source: https://github.com/RaspAP/raspap-webgui
-1. Set the WiFi country in raspi-config's Localisation Options
+Set the WiFi country in raspi-config's Localisation Options
 ```console
 sudo raspi-config
 ```
