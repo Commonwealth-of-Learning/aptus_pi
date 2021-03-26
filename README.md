@@ -126,7 +126,7 @@ Default configuration file location: /etc/apache2/sites-available/000-default.co
 Install PHP and support libraries (libraries for Moodle, WordPress, ownCloud, etc. sqlite3 for digital world map)
 ```console
 sudo apt update
-sudo apt install php7.3
+sudo apt install php7.3 libapache2-mod-php
 sudo apt install graphviz aspell ghostscript clamav php7.3-pspell php7.3-curl php7.3-gd php7.3-intl php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-ldap php7.3-zip php7.3-soap php7.3-mbstring
 sudo apt install sqlite3 php7.3-sqlite3
 ```
@@ -213,9 +213,12 @@ MariaDB > source /home/aptus/owncloud.sql;
 Download kiwix301 folder from the link we provided to the device.
 
 Add the following line to /etc/rc.local
+```
+/home/aptus/kiwix301/kiwix-serve --library /home/aptus/kiwix301/library.xml --daemon --port=8004
+```
 
 
-#### Jupyter Notebook
+#### Jupyter Notebook (Not working properly at the moment)
 
 Download notebooks folder from the link we provided to the device.
 
@@ -228,20 +231,9 @@ sudo python3 -m pip install --upgrade pip
 sudo pip3 install jupyter
 ```
 
-Running jupyter notebook
-```console 
-jupyter notebook --generate-config
-jupyter notebook --ip=0.0.0.0 --no-browser
-```
-
-Running on startup:
-Edit: /etc/crontab at the bottom of the file
-```bash
-SHELL=/bin/bash
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-@reboot rock64 cd /home/rock64/ && jupyter notebook --ip=0.0.0.0 --no-browser &
-```
-
 Add the following line to /etc/rc.local
-
+```
+sudo -u aptus nohup jupyter notebook --ip 192.168.169.2 --port=8888 --no-browser --notebook-dir=/home/aptus/notebooks &
+```
 #### KA-lite (offline Khan Academy videos)
+Discontinued 
