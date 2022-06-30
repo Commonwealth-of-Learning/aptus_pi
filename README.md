@@ -92,6 +92,16 @@ http port: 81
 
 Reboot the device and verify the changes.
 
+For Raspberry Pi 4, downgrade the Wi-Fi firmware to increase the number of simultaneous connections.
+
+Go to http://d.iiab.io/packages and download the firmware `brcmfmac43455-sdio.bin_2015-03-01_7.45.18.0_ub19.10.1`.
+
+```
+cd /lib/firmware/brcm
+sudo cp ~/Downloads/brcmfmac43455-sdio.bin_2015-03-01_7.45.18.0_ub19.10.1 .
+sudo rsync -tb --suffix=.`date +%Y-%m-%d_%H:%M:%S` brcmfmac43455-sdio.bin_2015-03-01_7.45.18.0_ub19.10.1 brcmfmac43455-sdio.bin
+```
+
 ### Captive Portal (optional)
 Source:https://www.maketecheasier.com/turn-raspberry-pi-captive-portal-wi%E2%80%90fi-access-point/
 
